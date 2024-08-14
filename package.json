@@ -10,7 +10,6 @@
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "serve": "vue-cli-service serve",
     "deploy": "vite build && gh-pages -d dist"
   },
   "dependencies": {
@@ -18,9 +17,7 @@
     "vue-router": "^4.3.3"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "^1.8.0",
     "@vitejs/plugin-vue": "^5.0.5",
-    "@vue/cli-service": "^5.0.8",
     "@vue/eslint-config-prettier": "^9.0.0",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.23.0",
