@@ -6,6 +6,7 @@
 * {
   font-family: 'Overpass Mono', monospace;
   font-weight: lighter;
+  letter-spacing: 8px;
   cursor: default;
 }
 
@@ -15,9 +16,13 @@ body {
 }
 
 a {
-  color: inherit; /* blue colors for links too */
+  color: inherit;
   text-decoration: inherit; /* no underline */
   cursor: pointer;
+}
+
+a:hover {
+  color: var(--textGray);
 }
 
 h1,
@@ -25,12 +30,156 @@ h2,
 h3,
 p {
   margin: 0;
-  padding: 10px;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.titleView {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.estheticLinks:hover {
+  color: var(--textGray);
+}
+
+.middleBlock {
+  a:hover {
+    color: var(--textBlack);
+  }
+}
+.ogGif {
+  width: 750px;
+  border-radius: 50%;
+}
+
+.background {
+  position: relative; /* Ensures the circleBackground andTextHorizontal are positioned relative to this container */
+  display: grid;
+  justify-content: center;
+  margin-bottom: 50px; /* Adjust this value as needed */
+  position: absolute; /* Position the circleBackground absolutely within the .background container */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circleBackground {
+  width: 600px;
+  height: 600px;
+  background-color: rgba(255, 255, 255); /* Semi-transparent white */
+  border-radius: 50%;
+  position: absolute; /* Position the circleBackground absolutely within the .background container */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centeredTextHorizontal {
+  display: flex;
+  flex-direction: row;
+  text-align: left; /* Center theTextHorizontal within the container */
+  align-self: center;
+  a:hover {
+    color: var(--textGray);
+  }
+}
+.centeredTextVertical {
+  display: flex;
+  flex-direction: column;
+  text-align: left; /* Center theTextHorizontal within the container */
+  align-self: center;
+}
+
+.textGray {
+  color: var(--textGray);
+}
+
+.mainText {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.blocksText {
+  letter-spacing: 4px;
+  display: flex;
+  flex-direction: column;
+  text-align: left; /* Center theTextHorizontal within the container */
+  margin: 10%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.retourLink {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  line-height: none;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: xx-small;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+}
+
+.bodyGroup {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  max-block-size: 75%;
+  margin-bottom: 16rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  .portraitBlock {
+    img {
+      height: 50vh;
+    }
+  }
+  .textBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 4px;
+    padding-left: 1rem;
+    button {
+      cursor: pointer;
+      background-color: #7a7a7a; /* Green */
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #000000;
+    }
+    .petitTexte {
+      letter-spacing: 4px;
+    }
+  }
 }
 
 /* Add more global styles as needed */
